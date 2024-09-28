@@ -41,7 +41,7 @@ struct HelloSwiftUIApp: App {
 * 바디 옆에 some View라는 코드의 의미는 바디가 리턴하는게 뭐든지 간에 View 프로토콜을 따르는 것이어야 한다는 뜻이다.<br/><br/>   
 
 
-* * * <br/><br/>
+* * * 
 
 ### View Modifier
 
@@ -68,7 +68,7 @@ struct HelloSwiftUIApp: App {
 ### AsyncImage
 : URL에서 이미지를 가져올 수 있다.<br/><br/>
 
-### 실습 코드<br/><br/>
+### 실습 코드
 ```swift
 {
         Text("i love Hello Kitty")
