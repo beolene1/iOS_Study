@@ -1,8 +1,8 @@
-# Section 9 SwiftUI Getting Started.  
+# Section 9 - SwiftUI Getting Started.  
 
 * SwiftUI를 선택해 프로젝트를 만들면 폴더에 파일이 두 개 만들어진다. 앱 파일과 콘텐츠뷰 파일. 콘텐트뷰 파일에서는 프리뷰 화면을 볼 수 있다.   
 
-* SwiftUI는 선언형 UI이다. 내가 보고 싶은 UI를 선언하면 되는 거.   
+* SwiftUI는 선언형 UI이다. 내가 보고 싶은 UI를 선언하면 되는 거.<br/><br/>   
 
 ### 앱 파일(HelloSwiftUIApp).  
 
@@ -22,7 +22,7 @@ struct HelloSwiftUIApp: App {
 }
 ```
 
-* 여기서 제일 위에 쓰여 있는 ‘App'은 그냥 프로토콜이다.   
+* 여기서 제일 위에 쓰여 있는 ‘App'은 그냥 프로토콜이다.<br/><br/>   
 
 
 ### 콘텐츠뷰(ContentView)   
@@ -38,12 +38,12 @@ struct HelloSwiftUIApp: App {
 
 * ‘Body’ 프로퍼티를 implement 해야만 View 프로토콜에 conform할 수 있다. body 프로퍼티가 리턴하는 것이 스크린에 보여지게 된다.   
 
-* 바디 옆에 some View라는 코드의 의미는 바디가 리턴하는게 뭐든지 간에 View 프로토콜을 따르는 것이어야 한다는 뜻이다.   
+* 바디 옆에 some View라는 코드의 의미는 바디가 리턴하는게 뭐든지 간에 View 프로토콜을 따르는 것이어야 한다는 뜻이다.<br/><br/>   
 
 
-* * *
+* * * <br/><br/>
 
-### view modifier
+### View Modifier
 
 ##### Text
 
@@ -62,13 +62,13 @@ struct HelloSwiftUIApp: App {
 
 ##### 기타
 
-* padding
+* padding <br/><br/>
 
 
 ### AsyncImage
-: URL에서 이미지를 가져올 수 있다.
+: URL에서 이미지를 가져올 수 있다.<br/><br/>
 
-
+### 실습 코드<br/><br/>
 ```swift
 {
         Text("i love Hello Kitty")
