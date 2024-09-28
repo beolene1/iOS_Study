@@ -91,6 +91,8 @@ struct HelloSwiftUIApp: App {
 ```
 
 
+<img width="339" alt="스크린샷 2024-09-28 오후 9 32 33" src="https://github.com/user-attachments/assets/29b91c3e-9dca-4df9-9f10-ae73e50c983d">
+
 
 
 
