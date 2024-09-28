@@ -122,14 +122,14 @@ struct ContentView: View {
 
 #### 2. Navigation Link 필요.   
 
-**navigationStack(List(navigationLink(EmotionCellDetailView)))**       
+> **navigationStack(List(navigationLink(EmotionCellDetailView)))**인 구조이다.     
 
 * navigationLink에 전달하는 값(Emotion type)은 Hashable 프로토콜을 준수해야 한다. 
 
 * 각각의 cell에 > 표시가 생긴다.
 
 #### 3. 도착 지점을 .navigationDestination으로 표현. 이 클로저 내에서 각각 뷰를 리턴한다.
-<br/><br/>   
+<br/>  
 
 
 
@@ -151,10 +151,12 @@ struct ContentView: View {
 <br/>
 
 
-* 여기서 navigationDestination(for: Emotion.self) 안하고 Int.self를 parameter로 넘겨줬으면, 아예 cell에 클릭 자체가 불가능하다. 이는 네비게이션 링크의 value가 Emotion type이기 때문에 destination도 똑같은 type으로? 만들어줘야 하기 때문이다.<br/>
+* 여기서 navigationDestination(for: Emotion.self) 안하고 Int.self를 parameter로 넘겨줬으면, 아예 cell에 클릭 자체가 불가능하다. 이는 네비게이션 링크의 value가 Emotion type이기 때문에 destination도 똑같은 type으로? 만들어줘야 하기 때문이다.
+<br/>
 
 
-> navigationDestination은 조금 높은 레벨에서 정의해야 한다?<br/>
+> navigationDestination은 조금 높은 레벨에서 정의해야 한다?
+<br/>
 
 * 타이틀 글자가 너무 길어서 잘리면 어떻게 해야 하는가?     
 -> 
@@ -207,7 +209,9 @@ struct ContentView: View {
         EmotionDetailScreen(emotion: Emotion(name: "shy", image: "shy", scores: 20))
     }
 }
+
 ```
+<br/>
 
 ### ContentView
 
