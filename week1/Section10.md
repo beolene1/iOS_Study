@@ -1,13 +1,14 @@
 # Section 10 - Building List and Navigation
 
 * 동적 리스트를 화면에 표시하는 법을 배운다.
-> 동적 리스트란? 항목이 추가, 변경, 삭제될 수 있고, 그 변화를 동적으로 반영하는 리스트가 동적 리스트이다.<br/>
+> 동적 리스트란? 항목이 추가, 변경, 삭제될 수 있고, 그 변화를 동적으로 반영하는 리스트가 동적 리스트이다.<br/><br/>
 
 * 내가 만든 Emotion이라는 type의 array를 ContentView 안에 선언해주자.    
 -> 이 array를 뷰에서 List로 표현하기 위해서는 이 array의 type이 Identifiable에 conform해야 한다.    
 
 > Identifiable이란 무엇일까?     
-> Identifiable이란 프로토콜이다. 고유 식별자를 가진 type을 위한 프로토콜이다. 이 프로토콜을 채택한 type은 고유한 식별자(unique identifier)를 제공해야 한다. **list에서 각 항목을 고유하게 식별할 수 있는 id라는 프로퍼티가 객체에 존재해야 한다.**.<br/>   
+> Identifiable이란 프로토콜이다. 고유 식별자를 가진 type을 위한 프로토콜이다. 이 프로토콜을 채택한 type은 고유한 식별자(unique identifier)를 제공해야 한다. **list에서 각 항목을 고유하게 식별할 수 있는 id라는 프로퍼티가 객체에 존재해야 한다.**
+<br/><br/>   
 
 요 id는 아주 유니크해야 하기 때문에 **UUID로 저장**한다.<br/><br/>
 
@@ -33,7 +34,8 @@ struct Emotion: Identifiable {
     let image: String
     let scores: Int
 }
-```<br/><br/><br/>
+```
+<br/><br/><br/>
 
 #### UIKit에서 tableview를 화면에 띄우기 위해 필요한 코드량보다 훨씬 적은 코드로 리스트 구현이 가능하다.
 
@@ -82,7 +84,8 @@ struct ContentView: View {
 
 * 코드 속 HStack은 화면 속 리스트의 cell 하나와 같은 역할을 하는데, HStack에서 우클릭하면 Extract Subview라는 항목이 있다. 코드를 더 깔끔하게 분리해줄 수 있다.    
 
--> 기존에 ContentView 안에서 정의되었던 emotions array 때문에 에러가 나는데, 그래서 extract된 subview에다 emotions을 전달해줘야 한다. (아래 참고)<br/>       
+-> 기존에 ContentView 안에서 정의되었던 emotions array 때문에 에러가 나는데, 그래서 extract된 subview에다 emotions을 전달해줘야 한다. (아래 참고).  
+<br/>       
 
 
 
@@ -92,7 +95,8 @@ struct ContentView: View {
             EmotionCellView(emotion: emotion)
         }
     }
-```<br/><br/>
+```
+<br/><br/>
 
 
 그리고 extracted된 cell 안에서 받아온 emotion을 저장할 프로퍼티를 선언?해줘야 한다.    
@@ -107,7 +111,8 @@ struct ContentView: View {
             Image(emotion.image)
                 .resizable()
 ~~ 후략
-```<br/><br/><br/>
+```
+<br/><br/><br/>
 
 
 ### Navigation 더하기
@@ -123,7 +128,8 @@ struct ContentView: View {
 
 * 각각의 cell에 > 표시가 생긴다.
 
-#### 3. 도착 지점을 .navigationDestination으로 표현. 이 클로저 내에서 각각 뷰를 리턴한다.<br/><br/>   
+#### 3. 도착 지점을 .navigationDestination으로 표현. 이 클로저 내에서 각각 뷰를 리턴한다.
+<br/><br/>   
 
 
 
@@ -141,7 +147,8 @@ struct ContentView: View {
             }
         }
     }
-```<br/>
+```
+<br/>
 
 
 * 여기서 navigationDestination(for: Emotion.self) 안하고 Int.self를 parameter로 넘겨줬으면, 아예 cell에 클릭 자체가 불가능하다. 이는 네비게이션 링크의 value가 Emotion type이기 때문에 destination도 똑같은 type으로? 만들어줘야 하기 때문이다.<br/>
@@ -153,7 +160,8 @@ struct ContentView: View {
 -> 
 ```swift  
 .navigationBarTitleDisplayMode(.inline)
-```<br/><br/>
+```
+<br/><br/>
 
 
 ### .onTapGesture
